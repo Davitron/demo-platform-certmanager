@@ -13,6 +13,9 @@ certmanager:
       maxUnavailable: 1
   cainjector:
     enabled: true
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::286747865976:role/cert-manager-irsa-role-management
   resources:
     requests:
       cpu: 10m
