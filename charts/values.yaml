@@ -1,2 +1,25 @@
 email: matthews.segun@gmail.com
 ingressClass: istio
+
+certmanager:
+  installCRDs: true
+  global:
+    leaderElection:
+      namespace: cert-manager
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+  cainjector:
+    enabled: true
+  resources:
+    requests:
+      cpu: 10m
+      memory: 64Mi
+    limits:
+      memory: 512Mi
+  # ref: https://github.com/jetstack/cert-manager/issues/2147
+  securityContext:
+    fsGroup: 1001
+    runAsUser: 1001
