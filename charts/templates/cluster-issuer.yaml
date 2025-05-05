@@ -11,5 +11,5 @@ spec:
     privateKeySecretRef:
       name: letsencrypt
     solvers:
-    - dns01:
-        route53: {}
+      - dns01:
+          route53: {}
