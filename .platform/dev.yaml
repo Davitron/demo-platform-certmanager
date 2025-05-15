@@ -1,0 +1,4 @@
+certmanager:
+  serviceAccount:
+    annotations:
+      eks.amazonaws.com/role-arn: arn:aws:iam::286747865976:role/cert-manager-irsa-role-development

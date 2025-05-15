@@ -15,7 +15,7 @@ certmanager:
     enabled: true
   serviceAccount:
     annotations:
-      eks.amazonaws.com/role-arn: arn:aws:iam::286747865976:role/cert-manager-irsa-role-management
+      eks.amazonaws.com/role-arn: ""
   resources:
     requests:
       cpu: 10m
